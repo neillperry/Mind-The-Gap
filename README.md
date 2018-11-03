@@ -12,7 +12,7 @@ There is one input for this problem:
 A computer is given an array of processes to run. Running each process consume one cycle. So for example, the array of 
 [0, 1, 2, 3] will return the integer 4 denoting four cycles to run the four different processes. 
 
-However - and this is the catch of the entire problem - the computer cannot run the exact same process unless there is a minimum gap between the last and current instance. There must be a gap of at least five spaces since the last time it ran that process.  So if the user inputs the array of processes of [0, 1, 2, 3, 3] the computer will have to inject a *gap* of five between the first and second running of 3. In this scenario, the computer will process the array of [0, 1, 2, 3, 3] as [0, 1, 2, 3, -, -, -, -, -, 3], which equals 10 cycles for a five process array. 
+However - and this is the catch of the entire problem - the computer cannot run a process again unless there is a minimum gap between the previous and current instance of that same process. There must be a gap of at least five spaces since the last time it ran that process.  So if the user inputs the array of processes of [0, 1, 2, 3, 3] the computer will have to inject a *gap* of five between the first and second running of 3. In this scenario, the computer will process the array of [0, 1, 2, 3, 3] as [0, 1, 2, 3, -, -, -, -, -, 3], which equals 10 cycles for a five process array. 
 
 There doesn't need to be a gap injected if it is the *first* time the computer runs a process or if there is already 
 a minimum of five spaces between the last and current instance. So the array of [3, 4, 1, 2, 9, 7, 3] will not 

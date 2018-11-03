@@ -20,7 +20,7 @@ require additional cycles because there is already a five-space gap between the 
 this example. 
 
 ## assumptions
- The array contains unsorted, non-zero, non-unique elements. (Don't sort the array or you'll screw everything up).
+ The array contains unsorted, non-unique elements. (Don't sort the array or you'll screw everything up).
  
  ## example
  To solve this problem, I created the following example.

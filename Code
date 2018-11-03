@@ -25,7 +25,7 @@ def mind_the_gap(array, n):
       # if not, then set its value in dictionary equal earliest next 
       # cycle it can run - which is counter plus gap n plus 1
 
-      dictionary[array[i]] = counter + n + 1
+      dictionary[array[i]] = counter + n 
 
     # if being run again 
     # check to see if it's running before its required gap
@@ -41,18 +41,18 @@ def mind_the_gap(array, n):
     
         #calculate difference b/w when cycle should and current index then add that to counter plus one
 
-        counter+= dictionary[array[i]] - counter + 1
+        counter+= dictionary[array[i]] - counter 
         
         # update the corresponding value entry for 
         # that key in the dictionary
 
-        dictionary[array[i]] = counter + n + 1
+        dictionary[array[i]] = counter + n 
 
 
       #otherwise, the cycle is not run before it's allowed, go # ahead and update its corresponding value 
 
       else:
-        dictionary[array[i]] = counter + n + 1
+        dictionary[array[i]] = counter + n
 
 
   return counter

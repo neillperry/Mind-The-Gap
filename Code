@@ -1,0 +1,62 @@
+
+def mind_the_gap(array, n):
+
+  # DECLARE VARIABLES
+  # counter will measure how many cycles have run
+  # while iterating over the array
+
+  counter = 0 
+
+  # dictionary will store cycle - minimum distance 
+  # as key value pairs
+
+  dictionary = {}
+
+  for i in range(len(array)):
+
+    # for each cycle you run, increment counter by one
+
+    counter+=1
+
+    #check to see if cycle is being run for the first time
+
+    if array[i] not in dictionary:
+
+      # if not, then set its value in dictionary equal earliest next 
+      # cycle it can run - which is counter plus gap n plus 1
+
+      dictionary[array[i]] = counter + n + 1
+
+    # if being run again 
+    # check to see if it's running before its required gap
+
+    else: 
+
+      # if counter is less than the corresponding VALUE for that cycle
+      # then it's being run before allowed
+
+      if dictionary[array[i]] > counter:
+
+        # now need to calculate how many gaps to add  
+    
+        #calculate difference b/w when cycle should and current index then add that to counter plus one
+
+        counter+= dictionary[array[i]] - counter + 1
+        
+        # update the corresponding value entry for 
+        # that key in the dictionary
+
+        dictionary[array[i]] = counter + n + 1
+
+
+      #otherwise, the cycle is not run before it's allowed, go # ahead and update its corresponding value 
+
+      else:
+        dictionary[array[i]] = counter + n + 1
+
+
+  return counter
+
+
+test = [0,1,2,3,3,1,0,4,3,2,4]
+mind_the_gap(test, 5)

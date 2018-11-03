@@ -23,7 +23,7 @@ def mind_the_gap(array, n):
     if array[i] not in dictionary:
 
       # if not, then set its value in dictionary equal earliest next 
-      # cycle it can run - which is counter plus gap n plus 1
+      # cycle it can run - which is counter plus gap n 
 
       dictionary[array[i]] = counter + n 
 
@@ -39,7 +39,7 @@ def mind_the_gap(array, n):
 
         # now need to calculate how many gaps to add  
     
-        #calculate difference b/w when cycle should and current index then add that to counter plus one
+        #calculate difference b/w when cycle should and current index then add that to counter
 
         counter+= dictionary[array[i]] - counter 
         

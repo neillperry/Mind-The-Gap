@@ -5,7 +5,7 @@
 This is a whiteboard coding challenge that I recently attempted. The task is to calculate the number of "cycles" that are required to run an array of processes. 
 
 ## Set up
-There is one input variable for this problem:
+There is one input for this problem:
   * *processes* - an array of integers that represent computer processes
 
 ## Problem

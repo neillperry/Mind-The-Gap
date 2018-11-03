@@ -9,7 +9,7 @@ There is one input for this problem:
   * *processes* - an array of integers that represent computer processes
 
 ## Problem
-A computer is given an array of processes to run. Running each cycle consume one cycle. So for example, the array of 
+A computer is given an array of processes to run. Running each process consume one cycle. So for example, the array of 
 [0, 1, 2, 3] will return the integer 4 denoting four cycles to run the four different processes. 
 
 However - and this is the catch of the entire problem - the computer cannot run the exact same process unless there is a minimum gap between the last and current instance. There must be a gap of at least five spaces since the last time it ran that process.  So if the user inputs the array of processes of [0, 1, 2, 3, 3] the computer will have to inject a *gap* of five between the first and second running of 3. In this scenario, the computer will process the array of [0, 1, 2, 3, 3] as [0, 1, 2, 3, -, -, -, -, -, 3], which equals 10 cycles for a five process array. 
